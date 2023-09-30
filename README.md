@@ -1,2 +1,2 @@
 # Phyton-Learning
-Just my start in phyton
+Just my start in python
