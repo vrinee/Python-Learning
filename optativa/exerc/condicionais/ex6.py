@@ -4,18 +4,16 @@ ano = int(input("Digite o ano: "))
 print("Data: ", dia, "/", mes, "/", ano)
 
 diaX = int(input("Digite quantos dias vai adicionar: "))
-if mes == 2:
-    diasM = 28
-elif mes%2 == 0:
-    diasM = 30
-else:
-    diasM = 31
-    
-dia += diaX
-if dia > diasM:
-    dia -= diasM
-    mes += 1
-    if mes > 12:
-        mes = 1
-        ano += 1
+
+diaD = diaX + dia + mes*30 + ano*365
+diaF = diaD % 365
+dia = diaF % 30
+ano = (diaD - diaF)/365
+mes = (diaF - dia)/30
+
+if dia == 0:
+    dia = 30
+    mes -= 1
+
+
 print("Nova data: ", dia, "/", mes, "/", ano)
