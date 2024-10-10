@@ -5,7 +5,7 @@ y = []
 for i in range(20):
     K.append(i)
     
-for i in range(20):
+for i in K:
     if i % 2 == 0:
         x.append(i)
     else:
@@ -19,5 +19,4 @@ for i in range(20):
     else:
         K[i] = x[l]
         l += 1
-        
 print(K)
