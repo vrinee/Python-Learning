@@ -17,7 +17,7 @@ for i in range(m):
 resultado = matriz.copy()
 for i in range(m):
     for j in range(m):
-        resultado[i][j] *= vetor[j]
+        resultado[j][i] *= vetor[j]
         
 print(vetor)
 print(matriz)
